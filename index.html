@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editkaro.in — Portfolio</title>
+  <meta name="description" content="Editkaro.in portfolio — social media marketing & video editing agency. Short-form, long-form, gaming, sports, eCommerce ads, documentaries, anime and color grading." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">EK</div>
+        <div class="brand-text">
+          <h1 class="brand-name">Editkaro<span>.in</span></h1>
+          <p class="brand-tag">Social Media Marketing • Video Editing</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h2>We turn raw footage into scroll-stopping stories.</h2>
+        <p>From shorts to documentaries, ads to anime edits — we craft, color, compress and deliver content that performs.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn primary">View Portfolio</a>
+          <a href="#contact" class="btn ghost">Get a Quote</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>800+</strong><span>videos delivered</span></li>
+          <li><strong>120M+</strong><span>views generated</span></li>
+          <li><strong>30+</strong><span>brands served</span></li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <video class="hero-video" src="https://www.w3schools.com/html/mov_bbb.mp4" poster="assets/poster-hero.svg" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+  </section>
+
+  <main id="content">
+    <section id="work" class="work">
+      <div class="container">
+        <div class="section-head">
+          <h3>Featured Work</h3>
+          <p>Filter by category or search to find relevant samples. Click any card to open a video lightbox.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="filters" id="filters">
+            <!-- filters injected by JS -->
+          </div>
+          <div class="search">
+            <input type="search" id="searchInput" placeholder="Search by title, tag or tool…" aria-label="Search portfolio">
+          </div>
+        </div>
+
+        <div id="grid" class="grid" aria-live="polite">
+          <!-- cards injected by JS -->
+        </div>
+
+        <div id="emptyState" class="empty hidden" role="status">
+          <img src="assets/empty-illustration.svg" alt="" />
+          <p>No results found. Try a different category or search term.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-head">
+          <h3>Services</h3>
+          <p>End-to-end editing for creators, agencies and brands.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <h4>Short-form Editing</h4>
+            <p>Reels, Shorts & TikToks optimized for retention with tight pacing, captions and trend-aware cuts.</p>
+          </article>
+          <article class="service">
+            <h4>Long-form & Documentaries</h4>
+            <p>Narrative structure, sound design, motion graphics and color pipelines for YouTube and OTT.</p>
+          </article>
+          <article class="service">
+            <h4>Performance Ads</h4>
+            <p>UGC, eCommerce and direct-response creatives tailored to platform specs and fast iteration.</p>
+          </article>
+          <article class="service">
+            <h4>Color & Finishing</h4>
+            <p>Professional color grading, audio cleanup, subtitling and export presets for every channel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-head">
+          <h3>About</h3>
+          <p>We're a small, agile team delivering studio-quality edits with startup speed.</p>
+        </div>
+        <div class="about-body">
+          <p>We partner with creators and brands to craft high-retention content. Our process is collaborative: clear briefs, fast first cuts, feedback cycles on Frame.io (or your tool), and on-brand delivery in multiple aspect ratios.</p>
+          <ul class="ticks">
+            <li>48–72h turnaround on shorts</li>
+            <li>Multi-language subtitles support</li>
+            <li>Secure file handling & NDAs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <h3>Contact</h3>
+          <p>Tell us about your project. We’ll reply within one business day.</p>
+        </div>
+        <form class="contact-form" name="contact" onsubmit="return handleContact(event)">
+          <div class="row">
+            <label>
+              <span>Name</span>
+              <input required type="text" name="name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input required type="email" name="email" />
+            </label>
+          </div>
+          <label>
+            <span>Project Type</span>
+            <select name="project">
+              <option>Short-form</option>
+              <option>Long-form</option>
+              <option>Gaming</option>
+              <option>Football</option>
+              <option>eCommerce Ads</option>
+              <option>Documentary</option>
+              <option>Anime</option>
+              <option>Color Grading</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us your goals, platforms, deadlines…"></textarea>
+          </label>
+          <div class="row row-actions">
+            <button type="submit" class="btn primary">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo small">EK</div>
+      <p>© <span id="year"></span> Editkaro.in • All rights reserved</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Twitter / X">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop" data-close></div>
+    <div class="lightbox-panel" role="document">
+      <button class="lightbox-close" aria-label="Close" data-close>&times;</button>
+      <div class="lightbox-media">
+        <video id="lightboxVideo" controls playsinline></video>
+      </div>
+      <div class="lightbox-meta">
+        <h4 id="lightboxTitle"></h4>
+        <div id="lightboxChips" class="chips"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
